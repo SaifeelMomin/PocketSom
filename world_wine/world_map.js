@@ -3,13 +3,13 @@ Plotly.d3.csv("/wine_production.csv", function(err, rows){
         return rows.map(function(row) { return row[key]; });
         }
     
-      console.log(unpack(rows, 'CODE'))
+      console.log(unpack(rows, 'CODES'))
       console.log(unpack(rows, 'WineProduction[HCL]'))
       console.log(unpack(rows, 'Country'))
 
         let data = [{
             type: 'choropleth',
-            locations: unpack(rows, 'CODE'),
+            locations: unpack(rows, 'CODES'),
             z: unpack(rows, 'WineProduction[HCL]'),
             text: unpack(rows, 'Country'),
             colorscale: [
@@ -30,20 +30,24 @@ Plotly.d3.csv("/wine_production.csv", function(err, rows){
             dtick: 1000,
             colorbar: {
                 autotic: false,
-                tickprefix: '$',
-                title: 'GDP<br>Billions US$'
+                // ticksuffix: 'HCL',
+                title: 'Wine<br>Production<br>(HCL)'
             }
         }]
         var layout = {
-          title: '2014 Global GDP<br>Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html"> CIA World Factbook</a>',
+          title: "Total Wine Production",
           geo:{
               showframe: false,
               showcoastlines: false,
               projection:{
                   type: 'mercator'
               }
+              
           }
         }
+
+        
+          
         Plotly.newPlot("map", data, layout, {showLink: false});
 })
 
