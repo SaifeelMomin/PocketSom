@@ -23,7 +23,7 @@
 
 
 ;(function () {
-    Plotly.d3.csv("/wine_production.csv", function(err, rows){
+    Plotly.d3.csv("/world_wine_data.csv", function(err, rows){
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
         }
@@ -32,7 +32,7 @@
         // console.log(unpack(rows, 'WineProduction[HCL]'))
         // console.log(unpack(rows, 'Country'))
 
-        let dropDownData = ["WineProduction[HCL]", "largestVineyards", "wineExport", "wineImport", "wineConsumption", "x"]
+        let dropDownData = ["WineProduction[HCL]", "Largest Vineyards", "wineExport", "wineImport", "wineConsumption"]
 
         function getWineData(wineData){
             for (i = 0; i < dropDownData.length; i++) {
@@ -52,7 +52,7 @@
             let data = [{
                 type: 'choropleth',
                 locations: unpack(rows, 'CODES'),
-                z: unpack(rows, 'WineProduction[HCL]'), //chage on click of Z
+                z: unpack(rows, wineData), //chage on click of Z
                 text: unpack(rows, 'Country'),
                 colorscale: [
                     [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
