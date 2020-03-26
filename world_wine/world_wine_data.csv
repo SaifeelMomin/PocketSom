@@ -2,6 +2,7 @@ Country,WineProduction[HCL],CODES,Largest Vineyards
 Italy,54.8,ITA,702
 France,49.1,FRA,789
 Spain,44.4,ESP,969
+United States,23.9,USA,430
 Argentina,14.5,ARG,219
 Chile,12.9,CHL,212
 Australia,12.9,AUS,145
@@ -233,7 +234,6 @@ Uganda,0,UGA,0
 Ukraine,0,UKR,0
 United States Minor Outlying Islands,0,UMI,0
 Uruguay,0,URY,0
-United States of America,0,USA,0
 Uzbekistan,0,UZB,111
 Holy See,0,VAT,0
 Saint Vincent and the Grenadines,0,VCT,0
