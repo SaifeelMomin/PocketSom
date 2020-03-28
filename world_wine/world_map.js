@@ -28,33 +28,37 @@
             return rows.map(function(row) { return row[key]; });
         }
         
-        // console.log(unpack(rows, 'CODES'))
-        // console.log(unpack(rows, 'WineProduction[HCL]'))
-        // console.log(unpack(rows, 'Country'))
 
-        let dropDownData = ["WineProduction[HCL]", "Largest Vineyards", "Exports", "Imports", "Consumption (Thousands)"]
+        let dropDownData = ["Wine Production", "Largest Vineyards", "Exports", "Imports", "Consumption"]
         let title = ["Total Wine Production",
                         "World's Largest Vineyards",
                         "Total Amount in Exports per Country",
                         "Total Amount in Imports per Country",
                         "Wine Consumption per Country"]
 
-        function getWineData(wineData){
-            for (i = 0; i < dropDownData.length; i++) {
-                if (dropDownData[i] === wineData){
-                    return wineData
-                }
-            }
-        }  
+        // function getWineData(wineData){
+        //     for (i = 0; i < dropDownData.length; i++) {
+        //         if (dropDownData[i] === wineData){
+        //             return wineData
+        //         }
+        //     }
+        // }  
 
       
          
         //Default map data
-        setChoroplethMap("WineProduction[HCL]")
+        setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
-            getWineData(wineData)
+            // getWineData(wineData)
             
+            const unitObj = {
+                "Wine Production": "Wine Production<br>[MhL]", 
+                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
+                "Exports": "Exports in Billions [$]", 
+                "Imports": "Imports in Billions [$]", 
+                "Consumption" : "Million Hectoliters<br>[MhL]"
+            }
 
             let data = [{
                 type: 'choropleth',
@@ -79,13 +83,21 @@
                 dtick: 1000,
                 colorbar: {
                     autotic: false,
-                    title: 'Wine<br>Production<br>(HCL)'
+                    title: unitObj[wineData]
                 }
             }]
 
+
+            const titleObj = {
+                "Wine Production": "Total Wine Production", 
+                "Largest Vineyards": "World's Largest Vineyards", 
+                "Exports": "Total Amount in Exports per Country", 
+                "Imports": "Total Amount in Imports per Country", 
+                "Consumption" : "Wine Consumption per Country"
+            }
             
             var layout = {
-                title: "Total World Production",
+                title: titleObj[wineData], 
                 width: 1200, 
                 height: 650,
                 dragmode: false,
@@ -106,10 +118,10 @@
         wineSelector = innerContainer.querySelector('.datasets');
 
         function assignOptions(textArray, selector) {
-        for (i = 0; i < textArray.length;  i++) {
-        let currentOption = document.createElement('option');
-        currentOption.text = textArray[i];
-        selector.appendChild(currentOption);
+            for (i = 0; i < textArray.length;  i++) {
+                let currentOption = document.createElement('option');
+                currentOption.text = textArray[i];
+                selector.appendChild(currentOption);
             }
         }
 
