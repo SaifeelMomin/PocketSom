@@ -32,7 +32,12 @@
         // console.log(unpack(rows, 'WineProduction[HCL]'))
         // console.log(unpack(rows, 'Country'))
 
-        let dropDownData = ["WineProduction[HCL]", "Largest Vineyards", "wineExport", "wineImport", "wineConsumption"]
+        let dropDownData = ["WineProduction[HCL]", "Largest Vineyards", "Exports", "Imports", "Consumption (Thousands)"]
+        let title = ["Total Wine Production",
+                        "World's Largest Vineyards",
+                        "Total Amount in Exports per Country",
+                        "Total Amount in Imports per Country",
+                        "Wine Consumption per Country"]
 
         function getWineData(wineData){
             for (i = 0; i < dropDownData.length; i++) {
@@ -40,14 +45,16 @@
                     return wineData
                 }
             }
-        }
+        }  
 
-
+      
+         
         //Default map data
         setChoroplethMap("WineProduction[HCL]")
 
         function setChoroplethMap(wineData){
             getWineData(wineData)
+            
 
             let data = [{
                 type: 'choropleth',
@@ -78,7 +85,7 @@
 
             
             var layout = {
-                title: "Total Wine Production",
+                title: "Total World Production",
                 width: 1200, 
                 height: 650,
                 dragmode: false,
