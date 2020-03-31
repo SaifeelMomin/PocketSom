@@ -1,27 +1,3 @@
-// const svgWidth = 1350
-// const svgHeight = 650
-
-// let margin = {
-//   top: 20,
-//   right: 40,
-//   bottom: 80,
-//   left: 100
-// }
-
-// let width = svgWidth - margin.left - margin.right
-// let height = svgHeight - margin.top - margin.bottom
-
-// let svg = d3
-//   .select(".map")
-//   .append("svg")
-//   .attr("width", svgWidth)
-//   .attr("height", svgHeight)
-
-// let chartGroup = svg
-//   .append("g")
-//   .attr("transform", `translate(${margin.left}, ${margin.top})`)
-
-
 ;(function () {
     Plotly.d3.csv("/world_wine_data.csv", function(err, rows){
         function unpack(rows, key) {
@@ -35,16 +11,7 @@
                         "Total Amount in Exports per Country",
                         "Total Amount in Imports per Country",
                         "Wine Consumption per Country"]
-
-        // function getWineData(wineData){
-        //     for (i = 0; i < dropDownData.length; i++) {
-        //         if (dropDownData[i] === wineData){
-        //             return wineData
-        //         }
-        //     }
-        // }  
-
-      
+   
          
         //Default map data
         setChoroplethMap("Wine Production")
@@ -78,12 +45,10 @@
                         width: 0.5
                     }
                 },
-                tick0: 0,
-                zmin: 0,
-                dtick: 1000,
+                
                 colorbar: {
                     autotic: false,
-                    title: unitObj[wineData]
+                    title: unitObj[wineData]  
                 }
             }]
 
@@ -98,8 +63,9 @@
             
             var layout = {
                 title: titleObj[wineData], 
-                width: 1200, 
-                height: 650,
+                autosize: true,
+                // width: 1100, 
+                height: 550,
                 dragmode: false,
                 geo:{
                     showframe: false,
