@@ -8,11 +8,13 @@
         
 
       
+
          
         //Default map data
         setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
+
             
             const unitObj = {
                 "Wine Production": "Wine Production<br>[MhL]", 
@@ -21,7 +23,15 @@
                 "Imports": "Imports in Billions [$]", 
                 "Consumption" : "Million Hectoliters<br>[MhL]"
             }
+
             
+            const unitObj = {
+                "Wine Production": "Wine Production<br>[MhL]", 
+                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
+                "Exports": "Exports in Billions [$]", 
+                "Imports": "Imports in Billions [$]", 
+                "Consumption" : "Million Hectoliters<br>[MhL]"
+            }
 
             let data = [{
                 type: 'choropleth',
@@ -41,17 +51,17 @@
                         width: 0.5
                     }
                 },
-                tick0: 0,
-                zmin: 0,
-                dtick: 1000,
+                
                 colorbar: {
                     autotic: false,
+
                     title: unitObj[wineData],
                     y: .65,
                     len: .65
                 },
 
             }]
+
 
             const titleObj = {
                 "Wine Production": "Total Wine Production", 
@@ -62,6 +72,7 @@
             }
             
             var layout = {
+
                 title: {
                     text: titleObj[wineData], 
                     font: {
@@ -70,6 +81,7 @@
                     }
                 },
                 autosize: true,
+
                 dragmode: false,
                 geo:{
                     showframe: false,
@@ -88,10 +100,10 @@
         wineSelector = innerContainer.querySelector('.datasets');
 
         function assignOptions(textArray, selector) {
-        for (i = 0; i < textArray.length;  i++) {
-        let currentOption = document.createElement('option');
-        currentOption.text = textArray[i];
-        selector.appendChild(currentOption);
+            for (i = 0; i < textArray.length;  i++) {
+                let currentOption = document.createElement('option');
+                currentOption.text = textArray[i];
+                selector.appendChild(currentOption);
             }
         }
 
