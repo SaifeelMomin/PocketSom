@@ -1,0 +1,39 @@
+.navbar {
+  background:#D85A76;
+} 
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: cursive;
+}
+.nav-link {
+  color: #fff;
+  margin-right: 1em !important;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: cursive;
+}
+.nav-brand:hover {
+  color: #870320;
+}
+.nav-link:hover {
+  color: #870320;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* rect {
+  height: 100%;
+  width: 100%;
+} */
+
+/* .choropleths{
+  background: #f6e9e9
+}
+.choropleth{
+  background: #f6e9e9
+} */
