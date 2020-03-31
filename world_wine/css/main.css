@@ -1,11 +1,11 @@
 .navbar {
   background:#D85A76;
 } 
-.nav-link,
+
 .navbar-brand {
   color: #fff;
   cursor: pointer;
-  font-size: 40px;
+  font-size:40px;
   font-weight: bold;
   font-style: cursive;
 }
@@ -26,14 +26,4 @@
   justify-content: flex-end;
 }
 
-/* rect {
-  height: 100%;
-  width: 100%;
-} */
 
-/* .choropleths{
-  background: #f6e9e9
-}
-.choropleth{
-  background: #f6e9e9
-} */

@@ -4,20 +4,26 @@
             return rows.map(function(row) { return row[key]; });
         }
         
-
         let dropDownData = ["Wine Production", "Largest Vineyards", "Exports", "Imports", "Consumption"]
-        let title = ["Total Wine Production",
-                        "World's Largest Vineyards",
-                        "Total Amount in Exports per Country",
-                        "Total Amount in Imports per Country",
-                        "Wine Consumption per Country"]
-   
+        
+
+      
+
          
         //Default map data
         setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
-            // getWineData(wineData)
+
+            
+            const unitObj = {
+                "Wine Production": "Wine Production<br>[MhL]", 
+                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
+                "Exports": "Exports in Billions [$]", 
+                "Imports": "Imports in Billions [$]", 
+                "Consumption" : "Million Hectoliters<br>[MhL]"
+            }
+
             
             const unitObj = {
                 "Wine Production": "Wine Production<br>[MhL]", 
@@ -48,8 +54,12 @@
                 
                 colorbar: {
                     autotic: false,
-                    title: unitObj[wineData]  
-                }
+
+                    title: unitObj[wineData],
+                    y: .65,
+                    len: .65
+                },
+
             }]
 
 
@@ -62,10 +72,16 @@
             }
             
             var layout = {
-                title: titleObj[wineData], 
+
+                title: {
+                    text: titleObj[wineData], 
+                    font: {
+                        family: "Arial",
+                        size: 32
+                    }
+                },
                 autosize: true,
-                // width: 1100, 
-                height: 550,
+
                 dragmode: false,
                 geo:{
                     showframe: false,
@@ -79,7 +95,7 @@
             Plotly.newPlot("map", data, layout, {showLink: false});   
         }
         
-        let innerContainer = document.querySelector('[data-num="0"'),
+        let innerContainer = document.querySelector(".control-row"),
         plotEl = innerContainer.querySelector('.plot'),
         wineSelector = innerContainer.querySelector('.datasets');
 
