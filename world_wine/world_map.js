@@ -1,59 +1,26 @@
-// const svgWidth = 1350
-// const svgHeight = 650
-
-// let margin = {
-//   top: 20,
-//   right: 40,
-//   bottom: 80,
-//   left: 100
-// }
-
-// let width = svgWidth - margin.left - margin.right
-// let height = svgHeight - margin.top - margin.bottom
-
-// let svg = d3
-//   .select(".map")
-//   .append("svg")
-//   .attr("width", svgWidth)
-//   .attr("height", svgHeight)
-
-// let chartGroup = svg
-//   .append("g")
-//   .attr("transform", `translate(${margin.left}, ${margin.top})`)
-
-
 ;(function () {
     Plotly.d3.csv("/world_wine_data.csv", function(err, rows){
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
         }
         
-        // console.log(unpack(rows, 'CODES'))
-        // console.log(unpack(rows, 'WineProduction[HCL]'))
-        // console.log(unpack(rows, 'Country'))
-
-        let dropDownData = ["WineProduction[HCL]", "Largest Vineyards", "Exports", "Imports", "Consumption (Thousands)"]
-        let title = ["Total Wine Production",
-                        "World's Largest Vineyards",
-                        "Total Amount in Exports per Country",
-                        "Total Amount in Imports per Country",
-                        "Wine Consumption per Country"]
-
-        function getWineData(wineData){
-            for (i = 0; i < dropDownData.length; i++) {
-                if (dropDownData[i] === wineData){
-                    return wineData
-                }
-            }
-        }  
+        let dropDownData = ["Wine Production", "Largest Vineyards", "Exports", "Imports", "Consumption"]
+        
 
       
          
         //Default map data
-        setChoroplethMap("WineProduction[HCL]")
+        setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
-            getWineData(wineData)
+            
+            const unitObj = {
+                "Wine Production": "Wine Production<br>[MhL]", 
+                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
+                "Exports": "Exports in Billions [$]", 
+                "Imports": "Imports in Billions [$]", 
+                "Consumption" : "Million Hectoliters<br>[MhL]"
+            }
             
 
             let data = [{
@@ -79,15 +46,30 @@
                 dtick: 1000,
                 colorbar: {
                     autotic: false,
-                    title: 'Wine<br>Production<br>(HCL)'
-                }
+                    title: unitObj[wineData],
+                    y: .65,
+                    len: .65
+                },
+
             }]
 
+            const titleObj = {
+                "Wine Production": "Total Wine Production", 
+                "Largest Vineyards": "World's Largest Vineyards", 
+                "Exports": "Total Amount in Exports per Country", 
+                "Imports": "Total Amount in Imports per Country", 
+                "Consumption" : "Wine Consumption per Country"
+            }
             
             var layout = {
-                title: "Total World Production",
-                width: 1200, 
-                height: 650,
+                title: {
+                    text: titleObj[wineData], 
+                    font: {
+                        family: "Arial",
+                        size: 32
+                    }
+                },
+                autosize: true,
                 dragmode: false,
                 geo:{
                     showframe: false,
@@ -101,7 +83,7 @@
             Plotly.newPlot("map", data, layout, {showLink: false});   
         }
         
-        let innerContainer = document.querySelector('[data-num="0"'),
+        let innerContainer = document.querySelector(".control-row"),
         plotEl = innerContainer.querySelector('.plot'),
         wineSelector = innerContainer.querySelector('.datasets');
 
