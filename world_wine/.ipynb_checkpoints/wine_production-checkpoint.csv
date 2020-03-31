@@ -1,0 +1,250 @@
+Country,WineProduction[HCL],CODES
+Italy,54.8,ITA
+France,49.1,FRA
+Spain,44.4,ESP
+Argentina,14.5,ARG
+Chile,12.9,CHL
+Australia,12.9,AUS
+Germany,9.8,DEU
+South Africa,9.5,ZAF
+China,9.3,CHN
+Portugal,6.1,PRT
+Romania,5.1,ROU
+Hungary,3.6,HUN
+Brazil,3.1,BRA
+New Zealand,3.0,NZL
+Austria,2.8,AUT
+Greece,2.2,GRC
+Switzerland,1.1,CHE
+Aruba,0,ABW
+Afghanistan,0,AFG
+Angola,0,AGO
+Anguilla,0,AIA
+Åland Islands,0,ALA
+Albania,0,ALB
+Andorra,0,AND
+United Arab Emirates,0,ARE
+Armenia,0,ARM
+American Samoa,0,ASM
+Antarctica,0,ATA
+French Southern Territories,0,ATF
+Antigua and Barbuda,0,ATG
+Azerbaijan,0,AZE
+Burundi,0,BDI
+Belgium,0,BEL
+Benin,0,BEN
+"Bonaire, Sint Eustatius and Saba",0,BES
+Burkina Faso,0,BFA
+Bangladesh,0,BGD
+Bulgaria,0,BGR
+Bahrain,0,BHR
+Bahamas,0,BHS
+Bosnia and Herzegovina,0,BIH
+Saint Barthélemy,0,BLM
+Belarus,0,BLR
+Belize,0,BLZ
+Bermuda,0,BMU
+Bolivia (Plurinational State of),0,BOL
+Barbados,0,BRB
+Brunei Darussalam,0,BRN
+Bhutan,0,BTN
+Bouvet Island,0,BVT
+Botswana,0,BWA
+Central African Republic,0,CAF
+Canada,0,CAN
+Cocos (Keeling) Islands,0,CCK
+Côte d'Ivoire,0,CIV
+Cameroon,0,CMR
+"Congo, Democratic Republic of the",0,COD
+Congo,0,COG
+Cook Islands,0,COK
+Colombia,0,COL
+Comoros,0,COM
+Cabo Verde,0,CPV
+Costa Rica,0,CRI
+Cuba,0,CUB
+Curaçao,0,CUW
+Christmas Island,0,CXR
+Cayman Islands,0,CYM
+Cyprus,0,CYP
+Czechia,0,CZE
+Djibouti,0,DJI
+Dominica,0,DMA
+Denmark,0,DNK
+Dominican Republic,0,DOM
+Algeria,0,DZA
+Ecuador,0,ECU
+Egypt,0,EGY
+Eritrea,0,ERI
+Western Sahara,0,ESH
+Estonia,0,EST
+Ethiopia,0,ETH
+Finland,0,FIN
+Fiji,0,FJI
+Falkland Islands (Malvinas),0,FLK
+Faroe Islands,0,FRO
+Micronesia (Federated States of),0,FSM
+Gabon,0,GAB
+United Kingdom of Great Britain and Northern Ireland,0,GBR
+Georgia,0,GEO
+Guernsey,0,GGY
+Ghana,0,GHA
+Gibraltar,0,GIB
+Guinea,0,GIN
+Guadeloupe,0,GLP
+Gambia,0,GMB
+Guinea-Bissau,0,GNB
+Equatorial Guinea,0,GNQ
+Grenada,0,GRD
+Greenland,0,GRL
+Guatemala,0,GTM
+French Guiana,0,GUF
+Guam,0,GUM
+Guyana,0,GUY
+Hong Kong,0,HKG
+Heard Island and McDonald Islands,0,HMD
+Honduras,0,HND
+Croatia,0,HRV
+Haiti,0,HTI
+Indonesia,0,IDN
+Isle of Man,0,IMN
+India,0,IND
+British Indian Ocean Territory,0,IOT
+Ireland,0,IRL
+Iran (Islamic Republic of),0,IRN
+Iraq,0,IRQ
+Iceland,0,ISL
+Israel,0,ISR
+Jamaica,0,JAM
+Jersey,0,JEY
+Jordan,0,JOR
+Japan,0,JPN
+Kazakhstan,0,KAZ
+Kenya,0,KEN
+Kyrgyzstan,0,KGZ
+Cambodia,0,KHM
+Kiribati,0,KIR
+Saint Kitts and Nevis,0,KNA
+"Korea, Republic of",0,KOR
+Kuwait,0,KWT
+Lao People's Democratic Republic,0,LAO
+Lebanon,0,LBN
+Liberia,0,LBR
+Libya,0,LBY
+Saint Lucia,0,LCA
+Liechtenstein,0,LIE
+Sri Lanka,0,LKA
+Lesotho,0,LSO
+Lithuania,0,LTU
+Luxembourg,0,LUX
+Latvia,0,LVA
+Macao,0,MAC
+Saint Martin (French part),0,MAF
+Morocco,0,MAR
+Monaco,0,MCO
+"Moldova, Republic of",0,MDA
+Madagascar,0,MDG
+Maldives,0,MDV
+Mexico,0,MEX
+Marshall Islands,0,MHL
+North Macedonia,0,MKD
+Mali,0,MLI
+Malta,0,MLT
+Myanmar,0,MMR
+Montenegro,0,MNE
+Mongolia,0,MNG
+Northern Mariana Islands,0,MNP
+Mozambique,0,MOZ
+Mauritania,0,MRT
+Montserrat,0,MSR
+Martinique,0,MTQ
+Mauritius,0,MUS
+Malawi,0,MWI
+Malaysia,0,MYS
+Mayotte,0,MYT
+Namibia,0,NAM
+New Caledonia,0,NCL
+Niger,0,NER
+Norfolk Island,0,NFK
+Nigeria,0,NGA
+Nicaragua,0,NIC
+Niue,0,NIU
+Netherlands,0,NLD
+Norway,0,NOR
+Nepal,0,NPL
+Nauru,0,NRU
+Oman,0,OMN
+Pakistan,0,PAK
+Panama,0,PAN
+Pitcairn,0,PCN
+Peru,0,PER
+Philippines,0,PHL
+Palau,0,PLW
+Papua New Guinea,0,PNG
+Poland,0,POL
+Puerto Rico,0,PRI
+Korea (Democratic People's Republic of),0,PRK
+Paraguay,0,PRY
+"Palestine, State of",0,PSE
+French Polynesia,0,PYF
+Qatar,0,QAT
+Réunion,0,REU
+Russian Federation,0,RUS
+Rwanda,0,RWA
+Saudi Arabia,0,SAU
+Sudan,0,SDN
+Senegal,0,SEN
+Singapore,0,SGP
+South Georgia and the South Sandwich Islands,0,SGS
+"Saint Helena, Ascension and Tristan da Cunha",0,SHN
+Svalbard and Jan Mayen,0,SJM
+Solomon Islands,0,SLB
+Sierra Leone,0,SLE
+El Salvador,0,SLV
+San Marino,0,SMR
+Somalia,0,SOM
+Saint Pierre and Miquelon,0,SPM
+Serbia,0,SRB
+South Sudan,0,SSD
+Sao Tome and Principe,0,STP
+Suriname,0,SUR
+Slovakia,0,SVK
+Slovenia,0,SVN
+Sweden,0,SWE
+Eswatini,0,SWZ
+Sint Maarten (Dutch part),0,SXM
+Seychelles,0,SYC
+Syrian Arab Republic,0,SYR
+Turks and Caicos Islands,0,TCA
+Chad,0,TCD
+Togo,0,TGO
+Thailand,0,THA
+Tajikistan,0,TJK
+Tokelau,0,TKL
+Turkmenistan,0,TKM
+Timor-Leste,0,TLS
+Tonga,0,TON
+Trinidad and Tobago,0,TTO
+Tunisia,0,TUN
+Turkey,0,TUR
+Tuvalu,0,TUV
+Taiwan,0,TWN
+"Tanzania, United Republic of",0,TZA
+Uganda,0,UGA
+Ukraine,0,UKR
+United States Minor Outlying Islands,0,UMI
+Uruguay,0,URY
+United States of America,0,USA
+Uzbekistan,0,UZB
+Holy See,0,VAT
+Saint Vincent and the Grenadines,0,VCT
+Venezuela (Bolivarian Republic of),0,VEN
+Virgin Islands (British),0,VGB
+Virgin Islands (U.S.),0,VIR
+Viet Nam,0,VNM
+Vanuatu,0,VUT
+Wallis and Futuna,0,WLF
+Samoa,0,WSM
+Yemen,0,YEM
+Zambia,0,ZMB
+Zimbabwe,0,ZWE
