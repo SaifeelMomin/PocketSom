@@ -10,6 +10,7 @@ requests = "*"
 beautifulsoup4 = "*"
 pandas = "*"
 lxml = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"

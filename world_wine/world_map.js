@@ -1,5 +1,5 @@
 ;(function () {
-    Plotly.d3.csv("/world_wine_data.csv", function(err, rows){
+    Plotly.d3.csv("../world_wine/world_wine_data.csv", function(err, rows){
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
         }
@@ -7,15 +7,12 @@
         let dropDownData = ["Wine Production", "Largest Vineyards", "Exports", "Imports", "Consumption"]
         
 
-      
-
-         
         //Default map data
         setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
 
-            
+                   
             const unitObj = {
                 "Wine Production": "Wine Production<br>[MhL]", 
                 "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
@@ -24,13 +21,20 @@
                 "Consumption" : "Million Hectoliters<br>[MhL]"
             }
 
-            
-            const unitObj = {
-                "Wine Production": "Wine Production<br>[MhL]", 
-                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
-                "Exports": "Exports in Billions [$]", 
-                "Imports": "Imports in Billions [$]", 
-                "Consumption" : "Million Hectoliters<br>[MhL]"
+            const tickmodeObj ={
+                "Wine Production": "auto", 
+                "Largest Vineyards": "auto", 
+                "Exports": "linear", 
+                "Imports": "array", 
+                "Consumption" : "auto"
+            }
+
+            const tickvalsObj ={
+                "Wine Production": 0, 
+                "Largest Vineyards": 0, 
+                "Exports": [0, 10, 100, 1000], 
+                "Imports": [0, 10, 100, 1000], 
+                "Consumption" : 0
             }
 
             let data = [{
@@ -41,7 +45,7 @@
                 colorscale: [
                     [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
                     [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
-                    [0.7,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']
+                    [0.99,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']
                 ],
                 autocolorscale: false,
                 reversescale: true,
@@ -54,20 +58,20 @@
                 
                 colorbar: {
                     autotic: false,
-
                     title: unitObj[wineData],
                     y: .65,
-                    len: .65
-                },
-
+                    len: .65,
+                    tickmode: tickmodeObj[wineData],
+                    tickvals: tickvalsObj[wineData]
+                }
             }]
 
 
             const titleObj = {
                 "Wine Production": "Total Wine Production", 
                 "Largest Vineyards": "World's Largest Vineyards", 
-                "Exports": "Total Amount in Exports per Country", 
-                "Imports": "Total Amount in Imports per Country", 
+                "Exports": "Total Dollar Amount in Exports per Country", 
+                "Imports": "Total Dollar Amount in Imports per Country", 
                 "Consumption" : "Wine Consumption per Country"
             }
             
