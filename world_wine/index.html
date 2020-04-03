@@ -2,24 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
-    
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
-    <div id="choropleths">
-        <div class="choropleth" data-num="0">
-          <div class="plot" id="map"></div>
-          <div class="control-row">
-            Data: <select class="datasets">
-            </select>
-          </div>
-        </div>
-      </div>
-    <!-- <div id="map"></div> -->
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="#">PocketSomm</a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="wine.html" class="nav-link" href="#">Wine</a>
+        </li>
+        <li class="nav-item">
+          <a href="wine_map.html" class="nav-link" href="#">Wine Regions Map</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="control-row">
+    Data: <select class="datasets">
+    </select>
+  </div>
+  <div id="choropleths">
+    <div class="choropleth" data-num="0">
+      <div class="plot js-plotly-plot" id="map" style="height: 800px; width: 100%"></div>   
+    </div>
+  </div>
     <script type="text/javascript" src="world_map.js"></script>
 </body>
 </html>
