@@ -21,31 +21,24 @@
                 "Consumption" : "Million Hectoliters<br>[MhL]"
             }
 
-            const tickmodeObj ={
-                "Wine Production": "auto", 
-                "Largest Vineyards": "auto", 
-                "Exports": "linear", 
-                "Imports": "array", 
-                "Consumption" : "auto"
-            }
-
-            const tickvalsObj ={
-                "Wine Production": 0, 
-                "Largest Vineyards": 0, 
-                "Exports": [0, 10, 100, 1000], 
-                "Imports": [0, 10, 100, 1000], 
-                "Consumption" : 0
+            const textObj = {
+                "Wine Production": unpack(rows, 'Wine Production'), 
+                "Largest Vineyards": unpack(rows, 'Largest Vineyards'), 
+                "Exports": unpack(rows, 'Exports_Values'), 
+                "Imports": unpack(rows, 'Imports_Values'), 
+                "Consumption" : unpack(rows, 'Consumption')
             }
 
             let data = [{
                 type: 'choropleth',
                 locations: unpack(rows, 'CODES'),
                 z: unpack(rows, wineData), //chage on click of Z
-                text: unpack(rows, 'Country'),
+                text: textObj[wineData],
+                hoverinfo: "text+location",
                 colorscale: [
                     [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
-                    [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
-                    [0.99,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']
+                    [0.35,'rgb(40, 60, 190)'], [0.6,'rgb(90, 120, 245)'],
+                    [0.6,'rgb(90, 120, 245)'],[1,'rgb(220, 220, 220)']
                 ],
                 autocolorscale: false,
                 reversescale: true,
@@ -59,10 +52,7 @@
                 colorbar: {
                     autotic: false,
                     title: unitObj[wineData],
-                    y: .65,
-                    len: .65,
-                    tickmode: tickmodeObj[wineData],
-                    tickvals: tickvalsObj[wineData]
+                    showticklabels: true
                 }
             }]
 

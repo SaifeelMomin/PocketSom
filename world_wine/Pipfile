@@ -11,6 +11,7 @@ beautifulsoup4 = "*"
 pandas = "*"
 lxml = "*"
 numpy = "*"
+jinja2 = "*"
 
 [requires]
 python_version = "3.7"
