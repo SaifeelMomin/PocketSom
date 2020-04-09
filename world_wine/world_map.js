@@ -12,12 +12,13 @@
 
         function setChoroplethMap(wineData){
 
-                   
+            
+
             const unitObj = {
                 "Wine Production": "Wine Production<br>[MhL]", 
                 "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
-                "Exports": "Exports in Billions [$]", 
-                "Imports": "Imports in Billions [$]", 
+                "Exports": "Log of Exports<br>in Billions [$]", 
+                "Imports": "Log of Imports<br>in Billions [$]", 
                 "Consumption" : "Million Hectoliters<br>[MhL]"
             }
 
@@ -36,7 +37,7 @@
                 text: textObj[wineData],
                 hoverinfo: "text+location",
                 colorscale: [
-                    [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
+                    [0,'rgb(5, 10, 102)'],[0.35,'rgb(40, 60, 190)'],
                     [0.35,'rgb(40, 60, 190)'], [0.6,'rgb(90, 120, 245)'],
                     [0.6,'rgb(90, 120, 245)'],[1,'rgb(220, 220, 220)']
                 ],
@@ -48,11 +49,13 @@
                         width: 0.5
                     }
                 },
+                type: "choropleth",
                 
                 colorbar: {
-                    autotic: false,
+                    autotic: true,
                     title: unitObj[wineData],
                     showticklabels: true
+
                 }
             }]
 
