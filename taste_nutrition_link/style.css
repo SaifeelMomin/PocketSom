@@ -1,0 +1,13 @@
+.box {
+    min-height: 50px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 1000;
+    color: #FFF;
+  }
+  
+  .pink {
+    background: hotpink;
+  }
+  
