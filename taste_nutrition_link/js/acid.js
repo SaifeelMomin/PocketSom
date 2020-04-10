@@ -40,7 +40,7 @@
                 mode: 'lines+markers'
             }           
             const layout = {
-                title: 'Tasting Metric: Acid, Nutrition Corelation',
+                title: 'Tasting Metric: Acid, Nutrition Correlation',
                 xaxis: {
                     title: 'Intensity',
                   },
