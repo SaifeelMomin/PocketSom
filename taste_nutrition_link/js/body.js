@@ -1,72 +1,48 @@
 (function() {
-    d3.csv('../Data/body.csv')
+    d3.csv('../Data2/body.csv')
         .then(data => {
             console.log(data)
-            console.log(data.forEach(entry => entry.category))            
+            console.log(data.forEach(entry => entry.Body))            
             const trace1 = {
-                x: data.map(entry => entry.BODY),
-                y: data.map(entry => entry.total_fat),
-                name: "total fat",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
-            }
-            const trace2 = {
-                x: data.map(entry => entry.BODY),
-                y: data.map(entry => entry.sugar),
-                name: "sugar",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
-            }
-            const trace3 = {
-                x: data.map(entry => entry.BODY),
+                x: data.map(entry => entry.Body),
                 y: data.map(entry => entry.sodium),
                 name: "sodium",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
+                mode: 'lines+markers'
+            }
+            const trace2 = {
+                x: data.map(entry => entry.Body),
+                y: data.map(entry => entry.calories),
+                name: "calories",
+                mode: 'lines+markers'
+            }
+            const trace3 = {
+                x: data.map(entry => entry.Body),
+                y: data.map(entry => entry.fat),
+                name: "fat",
+                mode: 'lines+markers'
             }
             const trace4 = {
-                x: data.map(entry => entry.BODY),
-                y: data.map(entry => entry.protein),
-                name: "protein",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
+                x: data.map(entry => entry.Body),
+                y: data.map(entry => entry.cholesterol),
+                name: "cholesterol",
+                mode: 'lines+markers'
             }
             const trace5 = {
-                x: data.map(entry => entry.BODY),
-                y: data.map(entry => entry.saturated_fat),
-                name: "saturated_fat",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
+                x: data.map(entry => entry.Body),
+                y: data.map(entry => entry.carbs),
+                name: "carbohydrates",
+                mode: 'lines+markers'
             }
             const trace6 = {
-                x: data.map(entry => entry.BODY),
-                y: data.map(entry => entry.carbohydrates),
-                name: "carbohydrates",
-                mode: 'markers',
-                marker: {
-                    size: 12
-                  },
-                type: 'scatter'
-            }     
+                x: data.map(entry => entry.Body),
+                y: data.map(entry => entry.protein),
+                name: "protein",
+                mode: 'lines+markers'
+            }           
             const layout = {
-                title: 'Average Nutrition Values of Food Pairings by the Wine Tasting Metric: Body',
+                title: 'Tasting Metric: Body, Nutrition Corelation',
                 xaxis: {
-                    title: 'Not Present(0), Very Little(1), Somewhat present(2), Present(3), Pronounced(4), Bold & Intense(5)',
+                    title: 'Intensity',
                   },
                   yaxis: {
                     title: '% Daily Value(PDV)',
