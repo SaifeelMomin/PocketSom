@@ -40,7 +40,7 @@
                 mode: 'lines+markers'
             }           
             const layout = {
-                title: 'Tasting Metric: ABV, Nutrition Corelation',
+                title: 'Tasting Metric: ABV, Nutrition Correlation',
                 xaxis: {
                     title: 'Intensity',
                   },
