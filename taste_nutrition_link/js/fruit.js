@@ -40,7 +40,7 @@
                 mode: 'lines+markers'
             }           
             const layout = {
-                title: 'Tasting Metric: Fruit, Nutrition Corelation',
+                title: 'Tasting Metric: Fruit, Nutrition Correlation',
                 xaxis: {
                     title: 'Intensity',
                   },
