@@ -40,7 +40,7 @@
                 mode: 'lines+markers'
             }           
             const layout = {
-                title: 'Tasting Metric: Tannin, Nutrition Corelation',
+                title: 'Tasting Metric: Tannin, Nutrition Correlation',
                 xaxis: {
                     title: 'Intensity',
                   },
