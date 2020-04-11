@@ -5,6 +5,7 @@ For our prediction model we used data from a variety of sources such as kaggle.c
 ### Model Building
 We began by taking our paired recipes and running a scraper to get ingredients and nutritional values for those recipes which were then tested in a variety of regression and classification models ranging from simple linear regressions to random forest regression and classifications. The model that provided us with the greatest prediction accuracy was the random forrest classification model, with an accuracy of ~86% on the train set and a predictive accuracy of ~76% on the test set. The plot below shows us the prediction error rates as the model went through refining and fitting to the dataset. The green line trend shows the error rate associated with the final model. 
 ![Model Error](Data/Rplot.png/)
+
 One of the short commings we had in building our model was the size of our dataset. The utilized dataset consisted of about 8,000 rows, so when it was being partitioned into test and train sets the resulting subsets were at most about 6,000 rows. This smaller subset of data meant our model would be more susceptible to outliers and variations in each nutritional category and thus would ultimately hinder the predictive accuracy.
 ## Wine Map
 #### Wine Prodution/Exports
