@@ -1,4 +1,7 @@
 # PocketSom
+## App Link
+https://pocketsomme.herokuapp.com/
+
 ## Wine Predictions
 ### Data
 For our prediction model we used data from a variety of sources such as kaggle.com and other websites like allrecipes.com.  Our wine pairing data and recipe data that was fed directly into the model was created through scraping thousands of pages and compiling the data into dataframes with pandas in python. 
