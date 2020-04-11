@@ -1,1 +1,0 @@
-/Users/Saifeel/Desktop/PocketSom/PocketSom/finding_food_richness.ipynb
