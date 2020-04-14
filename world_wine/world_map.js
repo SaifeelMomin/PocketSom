@@ -1,5 +1,5 @@
 ;(function () {
-    Plotly.d3.csv("/world_wine_data.csv", function(err, rows){
+    Plotly.d3.csv("../world_wine/world_wine_data.csv", function(err, rows){
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
         }
@@ -7,41 +7,39 @@
         let dropDownData = ["Wine Production", "Largest Vineyards", "Exports", "Imports", "Consumption"]
         
 
-      
-
-         
         //Default map data
         setChoroplethMap("Wine Production")
 
         function setChoroplethMap(wineData){
 
             
+
             const unitObj = {
                 "Wine Production": "Wine Production<br>[MhL]", 
                 "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
-                "Exports": "Exports in Billions [$]", 
-                "Imports": "Imports in Billions [$]", 
+                "Exports": "Log of Exports<br>in Billions [$]", 
+                "Imports": "Log of Imports<br>in Billions [$]", 
                 "Consumption" : "Million Hectoliters<br>[MhL]"
             }
 
-            
-            const unitObj = {
-                "Wine Production": "Wine Production<br>[MhL]", 
-                "Largest Vineyards": "Surface Area in<br>Thousand Hectares<br>[kha]", 
-                "Exports": "Exports in Billions [$]", 
-                "Imports": "Imports in Billions [$]", 
-                "Consumption" : "Million Hectoliters<br>[MhL]"
+            const textObj = {
+                "Wine Production": unpack(rows, 'Wine Production'), 
+                "Largest Vineyards": unpack(rows, 'Largest Vineyards'), 
+                "Exports": unpack(rows, 'Exports_Values'), 
+                "Imports": unpack(rows, 'Imports_Values'), 
+                "Consumption" : unpack(rows, 'Consumption')
             }
 
             let data = [{
                 type: 'choropleth',
                 locations: unpack(rows, 'CODES'),
                 z: unpack(rows, wineData), //chage on click of Z
-                text: unpack(rows, 'Country'),
+                text: textObj[wineData],
+                hoverinfo: "text+location",
                 colorscale: [
-                    [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
-                    [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
-                    [0.7,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']
+                    [0,'rgb(5, 10, 102)'],[0.35,'rgb(40, 60, 190)'],
+                    [0.35,'rgb(40, 60, 190)'], [0.6,'rgb(90, 120, 245)'],
+                    [0.6,'rgb(90, 120, 245)'],[1,'rgb(220, 220, 220)']
                 ],
                 autocolorscale: false,
                 reversescale: true,
@@ -51,23 +49,22 @@
                         width: 0.5
                     }
                 },
+                type: "choropleth",
                 
                 colorbar: {
-                    autotic: false,
-
+                    autotic: true,
                     title: unitObj[wineData],
-                    y: .65,
-                    len: .65
-                },
+                    showticklabels: true
 
+                }
             }]
 
 
             const titleObj = {
                 "Wine Production": "Total Wine Production", 
                 "Largest Vineyards": "World's Largest Vineyards", 
-                "Exports": "Total Amount in Exports per Country", 
-                "Imports": "Total Amount in Imports per Country", 
+                "Exports": "Total Dollar Amount in Exports per Country", 
+                "Imports": "Total Dollar Amount in Imports per Country", 
                 "Consumption" : "Wine Consumption per Country"
             }
             

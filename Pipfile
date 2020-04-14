@@ -6,9 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+sqlalchemy = "*"
+flask = "*"
+pymysql = "*"
 pandas = "*"
-ipykernel = "*"
-jupyterlab = "*"
+requests = "*"
+beautifulsoup4 = "*"
+sklearn = "*"
+scikit-learn = "*"
+gunicorn = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
