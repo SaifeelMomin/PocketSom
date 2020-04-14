@@ -1,5 +1,5 @@
 (function() {
-    d3.csv('../Data2/n_colors.csv')
+    d3.csv('Data2/n_colors.csv')
         .then(data => {
             console.log(data)
             console.log(data.forEach(entry => entry.Color))            

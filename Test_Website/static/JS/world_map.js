@@ -89,7 +89,18 @@
                 }
             }
             
-            Plotly.newPlot("map", data, layout, {showLink: false});   
+            Plotly.newPlot("map", data, layout, {showLink: false})
+            .then(
+                function(gd)
+                 {
+                  Plotly.toImage(gd,{height:300,width:300})
+                     .then(
+                         function(url)
+                     {
+                         img_jpg.attr("src", url);
+                     }
+                     )
+                });   
         }
         
         let innerContainer = document.querySelector(".control-row"),
@@ -112,6 +123,7 @@
 
         wineSelector.addEventListener('change', updateWine, false);
     })
+    
 })()
 
 
