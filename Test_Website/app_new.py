@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import json
+import numpy as np
 from datetime import datetime, date
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -49,12 +50,20 @@ def wine():
     return result
 
 
-@app.route("/wine_data/<wine_id>")
-def get_wine_data(wine_id):
-    qry = session.query("*").filter(wine_index.ID == wine_id).statement
-    df = pd.read_sql_query(qry, db.engine).drop(columns="ID")
-    result = df.to_json(orient="records")
-    return result
+@app.route("/wine_data/<wine>")
+def get_wine_data(wine):
+    qry = (
+    session.query("* from wine_data;")
+    .statement
+    )
+    df = pd.read_sql_query(qry, db.engine).drop(columns = "ID")
+    df = df.loc[df[wine]> 0]
+    data = {
+    "Wine_Name": pd.DataFrame(df[wine]).columns.values.tolist(),
+    "Attribute_Labels": np.array(pd.DataFrame(df["Attributes"]).values).flatten().tolist(),
+    "Attribute_Values": np.array(pd.DataFrame(df[wine]).values).flatten().tolist()
+    }
+    return jsonify(data)
 @app.route("/sandbox")
 def sandbox():
     result = render_template("sandbox.html")
