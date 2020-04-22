@@ -36,7 +36,7 @@ session = db.session
 Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 wine_index = Base.classes.wine_index
-
+wine_map_data = Base.classes.world_wine_data
 
 @app.route("/")
 def index():
@@ -68,6 +68,32 @@ def get_wine_data(wine):
 def sandbox():
     result = render_template("sandbox.html")
     return result
+
+@app.route("/wine_map")
+def wine_map():
+        result = render_template("wine_map.html")
+        return result
+
+@app.route("/wine_map_data")
+def get_wine_map_data():
+    qry = (
+    session.query("* from world_wine_data").statement
+    )
+    df = pd.read_sql_query(qry, db.engine).drop(columns = "ID")
+
+    data = {
+    "Country": np.array(pd.DataFrame(df["Country"]).values).flatten().tolist(),
+    "Wine_Production": np.array(pd.DataFrame(df["Wine_Production"]).values).flatten().tolist(),
+    "CODES": np.array(pd.DataFrame(df["CODES"]).values).flatten().tolist(),
+    "Largest_Vineyards": np.array(pd.DataFrame(df["Largest_Vineyards"]).values).flatten().tolist(),
+    "Exports_Values": np.array(pd.DataFrame(df["Exports_Values"]).values).flatten().tolist(),
+    "Exports": np.array(pd.DataFrame(df["Exports"]).values).flatten().tolist(),
+    "Imports_Values": np.array(pd.DataFrame(df["Imports_Values"]).values).flatten().tolist(),
+    "Imports": np.array(pd.DataFrame(df["Imports"]).values).flatten().tolist(),
+    "Consumption": np.array(pd.DataFrame(df["Consumption"]).values).flatten().tolist()
+    }
+
+    return jsonify(data)
 
 
 if __name__ == "__main__":
