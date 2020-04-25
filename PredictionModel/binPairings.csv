@@ -1,0 +1,14 @@
+﻿wine,red_meat,cured_meat,game,porks,poultry,fish,shellfish,mollusk,green_veg,root_veg,allium,nightshade,bean,fungi,fresh_green,earthy_green,bitter_floral,allium_spice,savory_brown,sharp_spicy,perfumed_citrus_spicy,smoky_spicy,umami_spicy,baking_spice,anise,fresh_salty,delicate_nutty,strong_firm,pungent,grilled_barbequed,sauteed_fried,roasted,smoked,poached_steamed,raw
+cabernet sauvignon,5,3,3,3,1,0.5,0.5,0.5,1,1,3,4,1,4,2,2,1,1,1,1,1,1,5,5,3,1,1,3,1,5,1,4,4,1,0.5
+merlot,3,4,5,5,4,0.5,0.5,0.5,1,4,3,5,4,5,3,2,1,1,1,1,1,4,3,4,5,1,3,5,5,3,1,5,5,1,0.5
+syrah,5,5,5,3,2,0.5,0.5,0.5,1,1,3,3,1,4,1,3,2,1,1,1,1,3,5,4,5,1,2,5,5,5,1,4,4,1,0.5
+malbec,5,4,3,3,3,0.5,0.5,0.5,1,1,3,3,1,4,4,4,2,1,1,1,1,1,5,5,3,1,2,5,5,5,1,3,3,1,0.5
+pinot noir,3,5,5,4,5,3,3,1,2,3,4,4,3,5,1,4,3,3,1,1,1,1,2,5,3,3,4,4,3,3,5,4,4,1,1
+sangiovese,3,4,5,5,4,2,2,1,2,3,3,5,3,4,1,4,2,2,1,1,1,2,5,3,3,3,4,5,3,4,2,5,3,1,0.5
+chardonnay,1,2,2,3,5,5,5,3,3,3,4,2,2,5,5,3,2,1,1,1,5,1,1,5,1,3,5,4,3,1,4,2,1,4,3
+sauvignon blanc,0.5,1,1,2,5,5,5,5,5,2,3,4,1,1,5,3,5,1,1,1,5,1,1,1,1,4,4,3,4,1,3,1,1,4,5
+riesling dry,0.5,1,2,1,3,5,5,5,4,4,3,2,4,1,5,2,5,1,1,1,5,2,3,3,2,5,5,4,4,1,3,1,1,5,5
+riesling off-dry,0.5,4,2,4,4,3,2,3,3,4,5,4,3,2,1,2,4,1,3,2,4,4,3,4,3,3,4,5,5,4,3,4,4,2,1
+gewurztraminer,0.5,4,4,4,4,2,2,2,3,4,5,4,2,2,2,5,5,1,4,4,4,2,3,4,1,5,4,4,5,3,4,4,1,4,2
+chenin blanc dry,0.5,1,2,2,4,4,3,4,2,4,4,3,2,5,2,4,2,2,1,3,4,1,1,2,4,4,5,3,4,1,5,4,1,3,4
+chenin blanc off-dry,0.5,4,4,4,4,2,2,1,2,4,4,3,4,4,1,3,3,2,3,4,4,4,2,5,3,3,4,5,4,3,3,5,1,4,1
