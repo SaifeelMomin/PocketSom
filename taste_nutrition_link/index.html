@@ -7,15 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>PocketSomm Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="../Test_Website/static/css/main.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box pink">PocketSom</div></a>
-            </div>    
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">PocketSomm</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="wine.html" class="nav-link" href="templates/wine.html">Wine</a>
+            </li>
+            <li class="nav-item">
+              <a href="wine_map.html" class="nav-link">Wine Regions Map</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            
+          </ul>
         </div>
-    </div>
+    </nav>
+
+      <header class="page-header header container-fluid">
+
     <div id="n_types"></div>
     <script src="js/n_types.js"></script>
     <div id="m_types"></div>
@@ -40,39 +61,5 @@
     <script src="js/dryness.js"></script>
     <div id="fruit"></div>
     <script src="js/fruit.js"></script>
-    <!-- <div id="calories"></div>
-    <script src="js/calories.js"></script>
-    <div id="nutrition"></div>
-    <script src="js/nutrition.js"></script>
-    <div id="taste"></div>
-    <script src="js/tasting.js"></script>
-    <div id="taste2"></div>
-    <script src="js/tasting2.js"></script>
-    <div id="red"></div>
-    <script src="js/red_fruit.js"></script>
-    <div id="citrus"></div>
-    <script src="js/citrus_fruit.js"></script>
-    <div id="stone"></div>
-    <script src="js/stone_fruit.js"></script>
-    <div id="black"></div>
-    <script src="js/black_fruit.js"></script>
-    <div id="floral"></div>
-    <script src="js/floral.js"></script>
-    <div id="mineral"></div>
-    <script src="js/minerality.js"></script>
-    <div id="herb"></div>
-    <script src="js/herbacious.js"></script>
-    <div id="pepper"></div>
-    <script src="js/pepper.js"></script>
-    <div id="earth"></div>
-    <script src="js/earth.js"></script>
-    <div id="spice"></div>
-    <script src="js/baking_spice.js"></script>
-    <div id="leather"></div>
-    <script src="js/leather.js"></script>
-    <div id="astringent"></div>
-    <script src="js/astringent.js"></script>
-    <div id="ph"></div>
-    <script src="js/ph.js"></script> -->
 </body>
 </html>
