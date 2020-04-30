@@ -123,7 +123,7 @@
   border:1px solid #CC0000;
   background:#D85A76;
   border-radius: 400px;
-  display: block;
+  display: flex;
   margin: 30px;
   color:#fff;
 }
@@ -134,6 +134,19 @@
   background: #D85A76;
   cursor: pointer;
 }
+
+
+
+.btn-group {
+  margin:0 auto;
+  display:block;
+}
+
+.btn-secondary {
+  background:#D85A76;
+  border:1px solid #CC0000;
+}
+
 .description a:hover {
   border:1px solid #fff;
   background:#fff;
