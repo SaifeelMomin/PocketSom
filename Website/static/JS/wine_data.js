@@ -17,7 +17,7 @@ function renderPlot(wine){
           let layout = {
             polar: {
               radialaxis: {
-                visible: true,
+                visible: false,
               }
             },
             showlegend: false,
