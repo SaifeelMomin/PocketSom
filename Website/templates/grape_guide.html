@@ -16,10 +16,11 @@ Released   : 20140331
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css” integrity=“sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh” crossorigin=“anonymous”>
+<link rel=“stylesheet” href=“https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css” integrity=“sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh” crossorigin=“anonymous”>
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="{{ url_for('static', filename='css/default.css') }}" rel="stylesheet" type="text/css" media="all" />
 <link href="{{ url_for('static', filename='css/fonts.css') }}" rel="stylesheet" type="text/css" media="all" />
+
 
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -45,84 +46,87 @@ Released   : 20140331
     </div>
   </div>
 
-  <!-- <div class="navbar"> -->
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Bold Red</button>
+    <div class="dropdown-content">
+      <a href="#">Cabernet Sauvignon</a>
+      <a href="#">Syrah</a>
+      <a href="#">Malbec</a>
+      <a href="#">Mourvedre</a>
+      <a href="#">Pinotage</a>
+      <a href="#">Petite Sirah</a>
+      <a href="#">Touriga Nacional</a>
+      <a href="#">Bordeau Blend</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Medium Red</button>
+    <div class="dropdown-content">
+      <a href="#">Merlot</a>
+      <a href="#">Sangiovese</a>
+      <a href="#">Cabernet Franc</a>
+      <a href="#">Tempranillo</a>
+      <a href="#">Nebbiolo</a>
+      <a href="#">Barbera</a>
+      <a href="#">Rhone Blonde</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Light Red</button>
+    <div class="dropdown-content">
+      <a href="#">Pinot Noir</a>
+      <a href="#">Grenache</a>
+      <a href="#">Gamy</a>
+      <a href="#">St. Laurent</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Rose</button>
+    <div class="dropdown-content">
+      <a href="#">Provence Rose</a>
+      <a href="#">White Zinfandel</a>
+      <a href="#">Dry Rose</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Rich White</button>
+    <div class="dropdown-content">
+      <a href="#">Chardonnay</a>
+      <a href="#">Gewurtzraminer</a>
+      <a href="#">Voignier</a>
+      <a href="#">Marsanne Blend</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Light White</button>
+    <div class="dropdown-content">
+      <a href="#">Sauvignon Blanc</a>
+      <a href="#">Chenin Blanc</a>
+      <a href="#">Riesling</a>
+      <a href="#">Pinot Blanc</a>
+      <a href="#">Vermentino</a>
+      <a href="#">Melon De Bourgogne</a>
+      <a href="#">Garganega</a>
+      <a href="#">Trebbiano</a>
+      <a href="#">Pinot Grigio</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Sparkling</button>
+    <div class="dropdown-content">
+      <a href="#">Champagne</a>
+      <a href="#">Prosecco</a>
+      <a href="#">Cremant</a>
+      <a href="#">Cava</a>
+    </div>
+  </div>
+</div>
 
-      <div class="dropdown">
-        <button class="dropbtn">Bold Red</button>
-        <div class="dropdown-content">
-            <a href="#">Cabernet Sauvignon</a>
-            <a href="#">Syrah</a>
-            <a href="#">Malbec</a>
-            <a href="#">Mourvedre</a>
-            <a href="#">Pinotage</a>
-            <a href="#">Petite Sirah</a>
-            <a href="#">Touriga Nacional</a>
-            <a href="#">Bordeau Blend</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Medium Red</button>
-        <div class="dropdown-content">
-          <a href="#">Merlot</a>
-          <a href="#">Sangiovese</a>
-          <a href="#">Cabernet Franc</a>
-          <a href="#">Tempranillo</a>
-          <a href="#">Nebbiolo</a>
-          <a href="#">Barbera</a>
-          <a href="#">Rhone Blonde</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Light Red</button>
-        <div class="dropdown-content">
-          <a href="#">Pinot Noir</a>
-          <a href="#">Grenache</a>
-          <a href="#">Gamy</a>
-          <a href="#">St. Laurent</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Rose</button>
-        <div class="dropdown-content">
-          <a href="#">Provence Rose</a>
-          <a href="#">White Zinfandel</a>
-          <a href="#">Dry Rose</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Rich White</button>
-        <div class="dropdown-content">
-          <a href="#">Chardonnay</a>
-          <a href="#">Gewurtzraminer</a>
-          <a href="#">Voignier</a>
-          <a href="#">Marsanne Blend</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Light White</button>
-        <div class="dropdown-content">
-          <a href="#">Sauvignon Blanc</a>
-          <a href="#">Chenin Blanc</a>
-          <a href="#">Riesling</a>
-          <a href="#">Pinot Blanc</a>
-          <a href="#">Vermentino</a>
-          <a href="#">Melon De Bourgogne</a>
-          <a href="#">Garganega</a>
-          <a href="#">Trebbiano</a>
-          <a href="#">Pinot Grigio</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Sparkling</button>
-        <div class="dropdown-content">
-          <a href="#">Champagne</a>
-          <a href="#">Prosecco</a>
-          <a href="#">Cremant</a>
-          <a href="#">Cava</a>
-        </div>
-      </div>
-  <!-- </div> -->
-   <br>
+
+  
+
+
 
 <div id="wrapper">
   <div id="featured-wine-wrapper">
