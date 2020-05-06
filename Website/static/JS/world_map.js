@@ -50,9 +50,9 @@
                     text: textObj[wineData],
                     hoverinfo: "text+location",
                     colorscale: [
-                        [0,'rgb(5, 10, 102)'],[0.35,'rgb(40, 60, 190)'],
-                        [0.35,'rgb(40, 60, 190)'], [0.6,'rgb(90, 120, 245)'],
-                        [0.6,'rgb(90, 120, 245)'],[1,'rgb(220, 220, 220)']
+                        [0,'rgb(152, 26, 68)'],[0.35,'rgb(200, 70, 110)'],
+                        [0.35,'rgb(200, 70, 110)'], [0.6,'rgb(225, 121, 156)'],
+                        [0.6,'rgb(225, 121, 156)'],[1,'rgb(220, 220, 220)']
                     ],
                     autocolorscale: false,
                     reversescale: true,
@@ -102,7 +102,7 @@
                     }
                 }
                 
-                Plotly.newPlot("map", data, layout, {showLink: false})
+                Plotly.newPlot("map", data, layout, {displayModeBar: false})
                 // .then(
                 //     function(gd)
                 //      {

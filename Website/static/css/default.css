@@ -322,6 +322,7 @@ ul.contact li a.icon-rss:before
 	text-transform: uppercase;
 	font-weight: 600;
 	color: #FFF;
+	width: 100%;
 }
 .button-wine
 {
@@ -989,7 +990,7 @@ ul.contact li a.icon-rss:before
 /*Drop Down Button*/
 /* Dropdown Button */
 .dropbtn {
-  background-color: #ba2358;;
+  background-color: #ba2358;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -1002,14 +1003,16 @@ ul.contact li a.icon-rss:before
 .dropdown {
   position: center;
   display: inline-block;
+  width:14.12%;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f2d3d3;
-  min-width: 160px;
+  min-width: 14.12%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -1020,6 +1023,9 @@ ul.contact li a.icon-rss:before
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: center;
+
+
 }
 
 /* Change color of dropdown links on hover */
@@ -1067,6 +1073,8 @@ ul.contact li a.icon-rss:before
   color:#fff;
 }
 
-/* .navbar{
+.navbar{
 	background-color: #ba2358;
-} */
+	width: 100%;
+}
+
