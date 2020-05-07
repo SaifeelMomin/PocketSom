@@ -32,7 +32,7 @@ Released   : 20140331
     <div id="header" class="container">
       <div id="logo">
         <h1><a  href="#">PocketSomm</a></h1>
-  </div>
+      </div>
       <div id="menu">
         <ul>
           <li><a href="/" accesskey="1" title="">Homepage</a></li>
@@ -40,17 +40,33 @@ Released   : 20140331
           <li class="current_page_item"><a href="#" accesskey="3" title="">Grape Guide</a></li>
           <li><a href="/wine_map" accesskey="4" title="">Wine Map</a></li>
           <li><a href="#" accesskey="5" title="">Analytics</a></li>
-          <li><a href="#" accesskey="5" title="">About Us</a></li>
+          <li><a href="/contact" accesskey="5" title="">About Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 
+  <script>
+    // function GetSelectedText(){
+		// 		let e = document.getElementById("#grapeOption");
+		// 		let result = e.a[e.selectedIndex].text;
+
+		// 		document.getElementById("result").innerHTML = result;
+    // 	}
+    function handler() {
+
+    let grapeOption = d3.select(option)
+
+    console.log(grapeOption)
+
+}
+  </script>
+
 <div class="navbar">
   <div class="dropdown">
     <button class="dropbtn">Bold Red</button>
-    <div class="dropdown-content">
-      <a href="#">Cabernet Sauvignon</a>
+    <div class="dropdown-content" id="grapeOption">
+      <a href="#" >Cabernet Sauvignon</a>
       <a href="#">Syrah</a>
       <a href="#">Malbec</a>
       <a href="#">Mourvedre</a>
@@ -124,54 +140,56 @@ Released   : 20140331
 </div>
 
 
-  
 
-
-
-<div id="wrapper">
-  <div id="featured-wine-wrapper">
-    <div id="featured" class="container">
-      <div class="row">
-        <div class="column">
-          <div>
-            <h2>Wine Tasting Metrics</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div>
-            <h2>Wine Tasting Notes</h2>
-          </div>
+<div id="featured-wine-wrapper">
+  <div id="featured-grape" class="container">
+  <div class="row">
+    <h1><b>Grape</b></h1>
+  </div>
+    <br>
+    <div class="row">
+      <div class="column">
+        <div>
+          <h2>Wine Tasting Metrics</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="column">
-          <div>
-            <div id="wine_plot"></div>
-          </div>
+      <div class="column">
+        <div>
+          <h2>Wine Info</h2>
         </div>
-        <div class="column">
-          <div>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor eu. Consequat 
-              interdum varius sit amet mattis vulputate enim nulla aliquet. Sed viverra tellus in hac 
-              habitasse platea dictumst vestibulum rhoncus. Egestas quis ipsum suspendisse ultrices. In hendrerit gravida 
-              rutrum quisque non tellus orci ac auctor. Tristique senectus et netus et malesuada fames. Arcu non odio euismod lacinia at quis 
-              risus sed vulputate. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Velit scelerisque in dictum non consectetur
-              a erat nam. Enim sed faucibus turpis in eu mi bibendum neque. Massa enim nec dui nunc mattis enim ut. Amet est placerat in egestas
-              erat imperdiet. Odio aenean sed adipiscing diam. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor
-              eu. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Sed viverra tellus in hac habitasse platea dictumst
-              vestibulum rhoncus. Egestas quis ipsum suspendisse ultrices. In hendrerit gravida rutrum quisque non tellus orci ac auctor.
-              Tristique senectus et netus et malesuada fames. Arcu non odio euismod lacinia at quis risus sed vulputate. Habitasse platea
-              dictumst vestibulum rhoncus est pellentesque. Velit scelerisque in dictum non consectetur a erat nam. Enim sed faucibus turpis in
-              eu mi bibendum neque. Massa enim nec dui nunc mattis enim ut. Amet est placerat in egestas erat imperdiet. Odio aenean sed adipiscing
-              diam. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat.</p>  
-          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div>
+          <div id="wine_plot"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div id="wine-info">
+          <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor eu. Consequat 
+            interdum varius sit amet mattis vulputate enim nulla aliquet. Sed viverra tellus in hac 
+            habitasse platea dictumst vestibulum rhoncus. Egestas quis ipsum suspendisse ultrices. In hendrerit gravida 
+            rutrum quisque non tellus orci ac auctor. Tristique senectus et netus et malesuada fames. Arcu non odio euismod lacinia at quis 
+            risus sed vulputate. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Velit scelerisque in dictum non consectetur
+            a erat nam. Enim sed faucibus turpis in eu mi bibendum neque. Massa enim nec dui nunc mattis enim ut. Amet est placerat in egestas
+            erat imperdiet. Odio aenean sed adipiscing diam. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu ultrices vitae auctor
+            eu. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Sed viverra tellus in hac habitasse platea dictumst
+            vestibulum rhoncus. Egestas quis ipsum suspendisse ultrices. In hendrerit gravida rutrum quisque non tellus orci ac auctor.
+            Tristique senectus et netus et malesuada fames. Arcu non odio euismod lacinia at quis risus sed vulputate. Habitasse platea
+            dictumst vestibulum rhoncus est pellentesque. Velit scelerisque in dictum non consectetur a erat nam. Enim sed faucibus turpis in
+            eu mi bibendum neque. Massa enim nec dui nunc mattis enim ut. Amet est placerat in egestas erat imperdiet. Odio aenean sed adipiscing
+            diam. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat.</b></p>  
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
 
 </header>
   <div id="copyright" class="container">

@@ -95,6 +95,11 @@ def get_wine_map_data():
 
     return jsonify(data)
 
+@app.route("/contact")
+def contact():
+        result = render_template("contact_us.html")
+        return result
+
 
 if __name__ == "__main__":
     app.run(debug=True)
