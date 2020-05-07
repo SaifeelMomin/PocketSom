@@ -86,3 +86,4 @@ prosecco_blurb: ['Italy’s number one sparkling wine comes from Northeastern It
 cremant_blurb: ['French sparkling wines made in the same method as Champagne, Crémants can be made with a wide variety of grapes, from Chardonnay and Chenin Blanc to Pinot Noir and Grenache.  Crémant wines vary in style and taste and include both white to rosé styles. Generally speaking, Crémant makes an excellent accompaniment to fried foods, soft cheeses, and salty appetizers.'],
 
 cava_blurb: ['Cava is the premier sparkling of Spain. The wine uses a similar quality tier system to Champagne but champions several of Spain’s native grapes including Macabeu (Viura), Xarel-lo, and Parellada. An amazing wine with Spanish favorites like tapas and paella, but also amazing with Mexican food and get this, red bean chili.'],
+}
