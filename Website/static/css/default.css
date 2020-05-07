@@ -26,7 +26,14 @@ h1, h2, h3
 p, ol, ul
 {
 	margin-top: 0;
+	color: black
 }
+
+#wine-info p{
+	color:white;
+	padding-right: 20px;
+}
+
 
 ol, ul
 {
@@ -56,7 +63,7 @@ a:hover
 .container
 {
 	margin: 10px auto;
-	width: 1200px;
+	width: 100%;
 }
 
 /*********************************************************************************/
@@ -390,6 +397,8 @@ ul.contact li a.icon-rss:before
 {
 	padding: 2em 0em;
 	background: #FFF;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 #header
@@ -407,7 +416,7 @@ ul.contact li a.icon-rss:before
 	position: absolute;
 	top: 1.5em;
 	left: 0;
-	width: 100%;
+	/* width: 100%; */
 }
 
 #logo h1
@@ -548,8 +557,9 @@ ul.contact li a.icon-rss:before
 #wrapper
 {
 	background: #FFF;
-	
+
 }
+
 
 #page
 {
@@ -651,19 +661,39 @@ ul.contact li a.icon-rss:before
 {
 	overflow: hidden;
 	padding: 6em 0em;
-	/*background-image: url(images/banner.jpg);*/
+	background-image: url(images/banner.jpg);
 	background: #f2d3d3;
-	/* text-align: center; */
+	text-align: center;
+
 
 }
 #featured-wine-wrapper
 {
 	overflow: hidden;
 	padding: 6em 0em;
-	background-image: "{{url_for('static', filename='../images/banner.jpg')}}";
-	/*background: #f2d3d3;*/
+	position: relative;
+	/* background-image: "{{url_for('static', filename='../images/banner.jpg')}}"; */
+	/* background-image: url(images/banner.jpg); */
+	/* background: #f2d3d3; */
 	text-align: center;
+	/* opacity: 50%; */
 	background-size: cover;
+	padding-left: 25px;
+	padding-right: 25px;
+
+}
+
+#featured-wine-wrapper::before{
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: url(images/banner.jpg);
+		opacity: .5;
+		background-size: cover;
 }
 
 #featured
@@ -701,10 +731,22 @@ ul.contact li a.icon-rss:before
 	font-size: 1.2em;
 }
 
+#featured h1
+{
+	text-align: center;
+	color:white;
+}
+
 #featured h2
 {
 	text-align: center;
-	color: #ba2358;
+	color:black;
+}
+
+#featured-grape h1, h2
+{
+	text-align: center;
+	color:white
 }
 
 #featured .icon
@@ -1003,7 +1045,7 @@ ul.contact li a.icon-rss:before
 .dropdown {
   position: center;
   display: inline-block;
-  width:14.12%;
+  width: 14.08%;
 }
 
 
@@ -1012,7 +1054,7 @@ ul.contact li a.icon-rss:before
   display: none;
   position: absolute;
   background-color: #f2d3d3;
-  min-width: 14.12%;
+  min-width: 14.08%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -1024,8 +1066,6 @@ ul.contact li a.icon-rss:before
   text-decoration: none;
   display: block;
   text-align: center;
-
-
 }
 
 /* Change color of dropdown links on hover */
@@ -1078,3 +1118,11 @@ ul.contact li a.icon-rss:before
 	width: 100%;
 }
 
+#wine_plot{
+	opacity: 100%;
+}
+
+.geolayer
+{
+	color: "rgba(200,200,200,1)",
+}
