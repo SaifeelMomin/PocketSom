@@ -1,7 +1,40 @@
 function loadWineData(){
+  renderGrapeBody()
   wineClicked = d3.select(this).text()
   renderPlot(wineClicked)
   renderWineBlurb(wineClicked)
+}
+function renderGrapeBody(){
+  d3.selectAll(`#featured-grape`).html(
+    `  <div class="row">
+    <h1><b id="grape-header">Grape</b></h1>
+  </div>
+    <br>
+    <div class="row">
+      <div class="column">
+        <div>
+          <h2>Wine Tasting Metrics</h2>
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <h2>Wine Info</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div>
+          <div id="wine_plot"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div id="wine-info">
+          <p id = "wine-blurb">This is the Wine Blurb</p>  
+        </div>
+      </div>
+    </div>`
+  )
 }
 function renderPlot(wine){
     d3.json(`wine_data/${wine}`).then((wine_data) => {
