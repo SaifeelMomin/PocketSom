@@ -1,6 +1,7 @@
 function loadWineData(){
   wineClicked = d3.select(this).text()
   renderPlot(wineClicked)
+  renderWineBlurb(wineClicked)
 }
 function renderPlot(wine){
     d3.json(`wine_data/${wine}`).then((wine_data) => {
@@ -39,5 +40,11 @@ function renderPlot(wine){
           };
           Plotly.newPlot('wine_plot', data, layout, {displayModeBar: false});
     })
+}
+function renderWineBlurb(wine){
+  d3.json(`wine_blurb/${wine}`).then((wineBlurb) => {
+    d3.select(`#grape-header`).html(wineBlurb.Wine)
+    d3.select("#wine-blurb").html(wineBlurb.Blurb)
+  }) 
 }
 d3.selectAll(".dropdown-content").selectAll("a").on("click", loadWineData)

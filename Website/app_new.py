@@ -35,8 +35,9 @@ db = SQLAlchemy(app)
 session = db.session
 Base = automap_base()
 Base.prepare(db.engine, reflect=True)
-wine_index = Base.classes.wine_index
+wine_data = Base.classes.wine_data
 wine_map_data = Base.classes.world_wine_data
+wine_blurbs = Base.classes.wine_blurbs
 
 @app.route("/")
 def index():
@@ -64,6 +65,21 @@ def get_wine_data(wine):
     "Attribute_Values": np.array(pd.DataFrame(df[wine]).values).flatten().tolist()
     }
     return jsonify(data)
+
+@app.route("/wine_blurb/<wine>")
+def get_wine_blurb(wine):
+    qry = session.query("*").filter(wine_blurbs.wine == wine).statement
+    df = pd.read_sql_query(qry, db.engine).drop(columns="ID")
+    data = {
+    "Wine": np.array(pd.DataFrame(df["wine"]).values)
+    .flatten()
+    .tolist(),
+    "Blurb": np.array(pd.DataFrame(df["blurb"]).values)
+    .flatten()
+    .tolist()
+    }
+    return jsonify(data)
+
 @app.route("/sandbox")
 def sandbox():
     result = render_template("sandbox.html")
