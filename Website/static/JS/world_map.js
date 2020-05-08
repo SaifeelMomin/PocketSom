@@ -66,8 +66,17 @@
                     
                     colorbar: {
                         autotic: true,
-                        title: unitObj[wineData],
-                        showticklabels: true
+                        title: {
+                            text: unitObj[wineData],
+                            font:{
+                                color: "white"
+                            }
+                        },
+                        showticklabels: true,
+                        tickfont:{
+                            color: "white"
+                        }
+
     
                     }
                 }]
@@ -87,12 +96,14 @@
                         text: titleObj[wineData], 
                         font: {
                             family: "Arial",
-                            size: 32
+                            size: 32,
+                            color: "white"
                         }
                     },
                     autosize: true,
                     paper_bgcolor: "rgba(0,0,0,0)",
                     dragmode: false,
+                    
                     geo:{
                         showframe: false,
                         showcoastlines: false,
