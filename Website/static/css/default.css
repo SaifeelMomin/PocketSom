@@ -1122,7 +1122,30 @@ ul.contact li a.icon-rss:before
 	opacity: 100%;
 }
 
-.geolayer
+.geolayer rect
 {
-	color: "rgba(200,200,200,1)",
+	fill:#383838 !important
+}
+
+.control-row
+{
+	color: white;
+	font-size: x-large;
+	padding-left: 25px;
+}
+
+
+/*********************************************************************************/
+/* About Us                                                                      */
+/*********************************************************************************/
+
+.row
+{
+	text-align: center;
+}
+
+.form-control
+{
+	width: 30%;
+	position: center
 }

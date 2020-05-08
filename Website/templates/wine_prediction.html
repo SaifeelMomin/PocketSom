@@ -37,40 +37,74 @@ Released   : 20140331
         <ul>
           <li><a href="/" accesskey="1" title="">Homepage</a></li>
           <li><a href="#" accesskey="2" title="">Wine Predictor</a></li>
-          <li><a href="/grape_guide" accesskey="3" title="">Grape Guide</a></li>
+          <li class="current_page_item"><a href="#" accesskey="3" title="">Grape Guide</a></li>
           <li><a href="/wine_map" accesskey="4" title="">Wine Map</a></li>
           <li><a href="#" accesskey="5" title="">Analytics</a></li>
-          <li class="current_page_item"><a href="/contact" accesskey="5" title="">About Us</a></li>
+          <li><a href="/contact" accesskey="5" title="">About Us</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-    <br>
-    <div id="featured-grape" class = "container"><h2>Get in Touch!</h2>
-      <br>
-      <div class="row">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name" name="">
+  <section>
+    <article>
+  <div class= "container-fluid">
+    <div class="description">
+      <h1>This Is PocketSomm!</h1>
+      <p>Here you can enter any recipe from AllRecipes.com and we can help you decide what wine goes best with the meal! </p>
+      <form action="/scrape" method="POST">
+        <input name="var">
+        <button type="submit" class="btn btn-outline-secondary btn-lg" type="button">Predict</button>
+      </form>
+    </div>
+  </div>
+</article>
+</section>
+<section>
+  <div class="container-fluid">
+    <div class= "row">
+      <div class = "col-3">
+        <div class = "card border-dark bg-light mb-3">
+          <div class = "card-header">
+            <b>Results</b>
+          </div>
+          <div class = "card-body">
+            <h4 class="card-title"> {{rName}}</h4>
+            <p>Best Match Prediction:<br/> <b>{{prediction}} Wine</b></p>
+          </div>
         </div>
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email Address" name="email">
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" rows="5" placeholder="Leave a comment!" ></textarea>
-        </div>
-          <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
       </div>
+      <div class = "col-5">
+        <div class="card border-dark bg-light mb-3" style="width: 100%;">
+          <div class="card-header">
+              Ingredients
+          </div>
+          <div class = "card border-dark bg-light mb-3">
+          <ul class="list-group">
+            <!-- list-group-flush  -->
+            {% for item in recipeIng %}
+              <li class="list-group">{{item}}</li>
+            {% endfor %}
+          </ul>
+          </div>
+        </div>  
+      </div>
+      <div class = "col-4">
+        <div class = "card border-dark bg-light mb-3">
+          <div class = "card-header">
+            Nutrition
+          </div>
+          <div class = "card-body">
+            <p>{{rNutr}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    
-
-  
 
 
-
-        
-            
-    
 
 </header>
   <div id="copyright" class="container">
