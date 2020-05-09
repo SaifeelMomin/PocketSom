@@ -12,21 +12,21 @@ function renderGrapeBody(){
     <br>
     <div class="row">
       <div class="column">
-        <div>
+        
           <h2>Wine Tasting Metrics</h2>
-        </div>
+        
       </div>
       <div class="column">
-        <div>
+        
           <h2>Wine Info</h2>
-        </div>
+        
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <div>
+      
           <div id="wine_plot"></div>
-        </div>
+        
       </div>
       <div class="column">
         <div id="wine-info">
@@ -69,7 +69,6 @@ function renderPlot(wine){
               size: 15,
               color: "white"
             }
-
           };
           Plotly.newPlot('wine_plot', data, layout, {displayModeBar: false});
     })
@@ -81,3 +80,18 @@ function renderWineBlurb(wine){
   }) 
 }
 d3.selectAll(".dropdown-content").selectAll("a").on("click", loadWineData)
+if (wineSelection != "blank"){
+  renderGrapeBody()
+  renderPlot(wineSelection)
+  renderWineBlurb(wineSelection)
+  wineSelection = "blank" 
+}
+
+
+
+
+
+
+
+
+

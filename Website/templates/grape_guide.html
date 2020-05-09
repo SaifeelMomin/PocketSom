@@ -122,7 +122,7 @@ Released   : 20140331
       <a href="#">Riesling</a>
       <a href="#">Pinot Blanc</a>
       <a href="#">Vermentino</a>
-      <a href="#">Melon de Bourgogne</a>
+      <a href="#">Melon De Bourgogne</a>
       <a href="#">Garganega</a>
       <a href="#">Trebbiano</a>
       <a href="#">Pinot Grigio</a>
@@ -166,7 +166,8 @@ Released   : 20140331
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-<script src="{{ url_for('static', filename='JS/wine_data.js') }}"></script>  
+<script type="text/javascript"> let wineSelection = '{{wine_selection}}'</script> 
+<script src="{{ url_for('static', filename='JS/wine_data.js') }}"></script> 
 
 </body>
 </html>

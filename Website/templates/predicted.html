@@ -34,7 +34,7 @@ Released   : 20140331
                 <li><a href="/" accesskey="1" title="">Homepage</a></li>
                 <li class="current_page_item"><a href="/predicted" accesskey="2" title="">Wine Predictor</a></li>
                 <li><a href="/grape_guide" accesskey="3" title="">Grape Guide</a></li>
-                <li class="/wine_map"><a href="#" accesskey="4" title="">Wine Map</a></li>
+                <li class="/wine_map"><a href="/wine_map" accesskey="4" title="">Wine Map</a></li>
                 <li><a href="/analytics" accesskey="5" title="">Analytics</a></li>
                 <li><a href="/contact_us" accesskey="5" title="">About Us</a></li>
             </ul>
@@ -64,7 +64,9 @@ Released   : 20140331
       <h2>Results for {{rName}}</h2>
       <p>Best Match Prediction:</p>
             <div>
-                <button class="btn btn-primary btn-lg float-right" style = color:firebrick href="#" role="button">{{Prediction}}</button>
+              <form action="/grape_guide" method="POST">
+                <button name="wine-selection" type="submit" class="btn btn-primary" value="{{prediction}}">{{prediction}}</button>
+            </form>
               </div>
       <p>Click for more information</p> 
     </div>
