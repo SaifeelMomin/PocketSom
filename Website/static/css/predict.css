@@ -1175,8 +1175,9 @@ ul.contact li a.icon-rss:before
   /* Float three columns side by side */
   .column_results {
 	float: left;
-	width: 33%;
+	width: 33.33%;
 	padding: 0 10px;
+	
   }
   
 
@@ -1187,6 +1188,7 @@ ul.contact li a.icon-rss:before
 	padding: 16px;
 	text-align: center;
 	background-color: #f1f1f1;
+	padding-left: 10px;
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */

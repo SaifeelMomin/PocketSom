@@ -665,7 +665,8 @@ ul.contact li a.icon-rss:before
 	background-image: url(images/banner.jpg);
 	background: #f2d3d3;
 	text-align: center;
-
+	padding-left: 20px;
+	padding-right: 20px;
 
 }
 #featured-wine-wrapper
@@ -765,13 +766,13 @@ ul.contact li a.icon-rss:before
 
 .column1,  .column2,  .column3,  .column4
 {
-	width: 282px;
+	width: 25%;
 }
 
 .column1,  .column2
 {
 	float: left;
-	margin-right: 24px;
+	/* margin-right: 24px; */
 }
 
 .column3
@@ -781,7 +782,7 @@ ul.contact li a.icon-rss:before
 
 .column4
 {
-	float: right;
+	float: left;
 }
 
 
