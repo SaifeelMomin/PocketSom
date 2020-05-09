@@ -81,3 +81,9 @@ function renderWineBlurb(wine){
   }) 
 }
 d3.selectAll(".dropdown-content").selectAll("a").on("click", loadWineData)
+if (wineSelection != "blank"){
+  renderGrapeBody()
+  renderPlot(wineSelection)
+  renderWineBlurb(wineSelection)
+  wineSelection = "blank" 
+}

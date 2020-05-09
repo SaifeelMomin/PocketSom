@@ -7,7 +7,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, desc
-from flask import Flask, jsonify, render_template, redirect, url_for
+from flask import Flask, jsonify, render_template, redirect, url_for, request,redirect
 from flask_sqlalchemy import SQLAlchemy
 
 # might be able to remove
@@ -45,9 +45,12 @@ def index():
     return result
 
 
-@app.route("/grape_guide")
+@app.route("/grape_guide", methods = ["GET","POST"])
 def wine():
-    result = render_template("grape_guide.html")
+    wine_prediction = "blank"
+    if request.method == "POST":
+        wine_prediction = request.form["wine-selection"]
+    result = render_template("grape_guide.html", wine_selection = wine_prediction)
     return result
 
 
