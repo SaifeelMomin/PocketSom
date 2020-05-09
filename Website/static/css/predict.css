@@ -580,7 +580,6 @@ ul.contact li a.icon-rss:before
 	background: #f2d3d3;
 	
 }
-
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
@@ -761,6 +760,44 @@ ul.contact li a.icon-rss:before
 	font-size: 3em;
 	text-align: center;
 	color: #ba2358;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .column1,  .column2,  .column3,  .column4
@@ -1128,6 +1165,40 @@ ul.contact li a.icon-rss:before
 	fill:#383838 !important
 }
 
+<<<<<<< HEAD
+/* prediction results card styling */
+* {
+	box-sizing: border-box;
+  }
+  
+
+  /* Float three columns side by side */
+  .column_results {
+	float: left;
+	width: 33%;
+	padding: 0 10px;
+  }
+  
+
+  
+  /* Style the counter cards */
+  .card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+	.column {
+	  width: 100%;
+	  display: block;
+	  margin-bottom: 20px;
+	}
+  }
+  
+=======
 .control-row
 {
 	color: white;
@@ -1150,27 +1221,4 @@ ul.contact li a.icon-rss:before
 	width: 30%;
 	position: center
 }
-
-/* Style the counter cards */
-.card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-	padding: 16px;
-	text-align: center;
-	background-color: #f1f1f1;
-  }
-  
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-	.column {
-	  width: 100%;
-	  display: block;
-	  margin-bottom: 20px;
-	}
-  }
-
-   /* Float three columns side by side */
-   .column_results {
-	float: left;
-	width: 33%;
-	padding: 0 10px;
-  }
+>>>>>>> 7a9fb2316359ab0bcb2c4962b51763a85ab8c1e1

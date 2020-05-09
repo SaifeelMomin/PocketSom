@@ -111,6 +111,16 @@ def get_wine_map_data():
 
     return jsonify(data)
 
+@app.route("/predicted")
+def predicted():
+    result = render_template("predicted.html")
+    return result
+
+@app.route("/analytics")
+def analytics():
+    result = render_template("analytics.html")
+    return result
+
 @app.route("/contact")
 def contact():
         result = render_template("contact_us.html")
