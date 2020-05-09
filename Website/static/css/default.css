@@ -1163,11 +1163,12 @@ body {
 	opacity: 100%;
 }
 
-.geolayer
+.geolayer rect
 {
-	color: "rgba(200,200,200,1)",
+	fill:#383838 !important
 }
 
+<<<<<<< HEAD
 /* prediction results card styling */
 * {
 	box-sizing: border-box;
@@ -1211,3 +1212,27 @@ body {
 	}
   }
   
+=======
+.control-row
+{
+	color: white;
+	font-size: x-large;
+	padding-left: 25px;
+}
+
+
+/*********************************************************************************/
+/* About Us                                                                      */
+/*********************************************************************************/
+
+.row
+{
+	text-align: center;
+}
+
+.form-control
+{
+	width: 30%;
+	position: center
+}
+>>>>>>> 7a9fb2316359ab0bcb2c4962b51763a85ab8c1e1
