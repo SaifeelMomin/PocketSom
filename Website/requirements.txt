@@ -54,7 +54,7 @@ pickleshare==0.7.5
 prometheus-client==0.7.1
 prompt-toolkit==3.0.5
 protobuf==3.6.1
-Pygments==2.6.1
+Pygments==2.7.4
 PyMySQL==0.9.3
 pyparsing==3.0.0a1
 pyrsistent==0.16.0
